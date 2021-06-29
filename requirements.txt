@@ -2,4 +2,3 @@ pandas
 streamlit
 asyncio
 httpx_oauth
-SessionState
