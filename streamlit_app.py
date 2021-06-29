@@ -33,12 +33,9 @@ def main(user_id, user_email):
 
 
 if __name__ == '__main__':
-    os.environ['GOOGLE_CLIENT_ID'] = '137571119677-lb1jpf7mnklm89ah52j47n69psr8qcna.apps.googleusercontent.com'
-    os.environ['GOOGLE_CLIENT_SECRET'] = 'Y59R1_cvusB5T0EYPOilpX3x'
-    os.environ['REDIRECT_URI'] = 'http://localhost:8501'
-    client_id = os.environ['GOOGLE_CLIENT_ID']
-    client_secret = os.environ['GOOGLE_CLIENT_SECRET']
-    redirect_uri = os.environ['REDIRECT_URI']
+    client_id = st.secrets['GOOGLE_CLIENT_ID']
+    client_secret = st.secrets['GOOGLE_CLIENT_SECRET']
+    redirect_uri = st.secrets['REDIRECT_URI']
 
     client = GoogleOAuth2(client_id, client_secret)
     authorization_url = asyncio.run(
