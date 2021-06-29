@@ -9,7 +9,7 @@ async def write_authorization_url(client, redirect_uri):
     authorization_url = await client.get_authorization_url(
         redirect_uri,
         scope=["profile", "email"],
-        extras_params={"access_type": "offline"},
+        extras_params={"access_type": "online"},
     )
     return authorization_url
 
