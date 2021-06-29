@@ -2,3 +2,5 @@ pandas
 streamlit
 asyncio
 httpx-oauth
+openpyxl
+yagmail
